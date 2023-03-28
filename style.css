@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@300&display=swap');
+
+.rec{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nomeCompleto{
+    border-radius: 10px;
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dataDeNascimento{
+    border-radius: 10px;
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.genero{
+    border-radius: 10px;
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.nacionalidade{
+    border-radius: 10px;
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+

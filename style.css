@@ -1,39 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@300&display=swap');
 
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
 .rec{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+    background-color: white;
 }
 
-.nomeCompleto{
+.subtextform{
+    margin: 50px;
+}
+.inputstyle{
     border-radius: 10px;
     height: 20px;
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-.dataDeNascimento{
-    border-radius: 10px;
-    height: 20px;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .genero{
     border-radius: 10px;
-    height: 20px;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.nacionalidade{
-    border-radius: 10px;
-    height: 20px;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
+    height: 40px;
+    width: 320px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 

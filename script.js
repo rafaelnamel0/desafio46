@@ -1,4 +1,4 @@
-<!-- Created By CodingNepal -->
+<!-- Created By CodingNepal e Adaptado pela equipe ThreeCoders -->
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");

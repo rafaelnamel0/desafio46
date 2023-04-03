@@ -1,71 +1,73 @@
-var current_fs, next_fs, previous_fs;
-var left, opacity, scale;
-var animating;
-$(".next").click(function () {
-  if (animating) return false;
-  animating = true;
+<!-- Created By CodingNepal -->
+const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const nextBtnThird = document.querySelector(".next-2");
+const prevBtnFourth = document.querySelector(".prev-3");
+const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
 
-  current_fs = $(this).parent();
-  next_fs = $(this).parent().next();
-  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-  next_fs.show();
-  current_fs.animate(
-    { opacity: 0 },
-    {
-      step: function (now, mx) {
-        scale = 1 - (1 - now) * 0.2;
-        left = now * 50 + "%";
-        opacity = 1 - now;
-        current_fs.css({
-          transform: "scale(" + scale + ")",
-          position: "absolute"
-        });
-        next_fs.css({ left: left, opacity: opacity });
-      },
-      duration: 800,
-      complete: function () {
-        current_fs.hide();
-        animating = false;
-      },
-      easing: "easeInOutBack"
-    }
-  );
+nextBtnFirst.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+nextBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-75%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+submitBtn.addEventListener("click", function(){
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+  setTimeout(function(){
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  },800);
 });
 
-$(".previous").click(function () {
-  if (animating) return false;
-  animating = true;
-
-  current_fs = $(this).parent();
-  previous_fs = $(this).parent().prev();
-  $("#progressbar li")
-    .eq($("fieldset").index(current_fs))
-    .removeClass("active");
-
-  previous_fs.show();
-  current_fs.animate(
-    { opacity: 0 },
-    {
-      step: function (now, mx) {
-        scale = 0.8 + (1 - now) * 0.2;
-        left = (1 - now) * 50 + "%";
-        opacity = 1 - now;
-        current_fs.css({ left: left });
-        previous_fs.css({
-          transform: "scale(" + scale + ")",
-          opacity: opacity
-        });
-      },
-      duration: 800,
-      complete: function () {
-        current_fs.hide();
-        animating = false;
-      },
-      easing: "easeInOutBack"
-    }
-  );
+prevBtnSec.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
 });
-
-$(".submit").click(function () {
-  return false;
+prevBtnThird.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+prevBtnFourth.addEventListener("click", function(event){
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
 });

@@ -1,4 +1,3 @@
-<!-- Created By CodingNepal e Adaptado pela equipe ThreeCoders -->
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
@@ -17,7 +16,6 @@ nextBtnFirst.addEventListener("click", function(event){
   slidePage.style.marginLeft = "-25%";
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
   current += 1;
 });
 nextBtnSec.addEventListener("click", function(event){
@@ -42,7 +40,7 @@ submitBtn.addEventListener("click", function(){
   progressText[current - 1].classList.add("active");
   current += 1;
   setTimeout(function(){
-    alert("Your Form Successfully Signed up");
+    alert("Você finalizou a sua inscrição!");
     location.reload();
   },800);
 });
